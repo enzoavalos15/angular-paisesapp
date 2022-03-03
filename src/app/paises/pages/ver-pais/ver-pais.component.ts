@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { switchMap, tap } from 'rxjs/operators';
 
-import { Country } from '../../interfaces/paises.interface';
+import { Country, Translation } from '../../interfaces/paises.interface';
 import { PaisService } from '../../services/pais.service';
 
 @Component({
@@ -36,6 +36,7 @@ export class VerPaisComponent implements OnInit {
     //   });
     // });
   }
+
 
 
 }

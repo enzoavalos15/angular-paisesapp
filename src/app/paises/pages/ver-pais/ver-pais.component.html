@@ -1,6 +1,4 @@
-<div 
-*ngIf="!pais; else divPais"
-class="alert alert-info">
+<div *ngIf="!pais; else divPais" class="alert alert-info">
     Cargando...
 </div>
 
@@ -23,10 +21,33 @@ class="alert alert-info">
             <h3>Informacion</h3>
             <ul class="list-group">
                 <li class="list-group-item">
-                    
+                    <strong>Capital</strong> {{ pais[0].capital }}
                 </li>
+                <li class="list-group-item">
+                    <strong>Población</strong> {{ pais[0].population | number }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Región</strong> {{ pais[0].subregion }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Código</strong> {{ pais[0].cca3 }}
+                </li>
+
             </ul>
         </div>
     </div>
-    
+
+    <h3>Traducciones</h3>
+
+    <div class="row">
+        <div class="col">
+            <li class="badge bg-primary m-1">{{ pais[0].translations['spa'].common }}</li>
+            <li class="badge bg-primary m-1">{{ pais[0].translations['deu'].common }}</li>
+            <li class="badge bg-primary m-1">{{ pais[0].translations['fra'].common }}</li>
+            <li class="badge bg-primary m-1">{{ pais[0].translations['cym'].common }}</li>
+            <li class="badge bg-primary m-1">{{ pais[0].translations['ita'].common }}</li>
+            <li class="badge bg-primary m-1">{{ pais[0].translations['por'].common }}</li>
+            <li class="badge bg-primary m-1">{{ pais[0].translations['jpn'].common }}</li>
+        </div>
+    </div>
 </ng-template>
